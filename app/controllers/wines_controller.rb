@@ -1,12 +1,12 @@
 class WinesController < ApplicationController
-  def index
- 	@wines=Wine.all
-  end
+  	def index
+ 		@wines=Wine.all
+  	end
 
-  def show
-	@wine=Wine.find(params[:id])
-  end
-end
+  	def show
+		@wine=Wine.find(params[:id])
+  	end
+
 	def new
 		@wine=Wine.new
 	end
@@ -17,7 +17,9 @@ end
 		redirect_to @wine
 	end
 
-	def edit; end
+	def edit; 
+	end
+	
 	def update
 		@wine.update(wine_params)
 		redirect_to @wine
@@ -30,7 +32,7 @@ end
 
 	private
 	def wine_params
-		params.require(:wine).permit(:name, :year, :winery, :country,:varietal)
+		params.require(:wine).permit(:name, :year, :winery, :country, :varietal)
 	end
 
 	def set_wine= Wine.find(params[:id])
