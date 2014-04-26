@@ -3,7 +3,7 @@
 <%= page_entries_info @wines %>
 <ol>
 <% @wines.each do |wine|%>
-	<li><%=link_to(wine.name,wine)%> a <%=wine.winery %> from <%= wine.varietal%></li>
+	<li><%=link_to(wine.name,wine)%> of varietal <%=wine.varietal %> from <%= wine.winery%></li>
 <%end%>
 </ol>
 <%= paginate @wines %>
