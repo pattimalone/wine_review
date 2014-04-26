@@ -1,10 +1,18 @@
-<h1>Wines</h1>
-<p>Available as <%= formatted_time(@available_at) %></p>
-<%= page_entries_info @wines %>
-<ol>
-<% @wines.each do |wine|%>
-	<li><%=link_to(wine.name,wine)%> of varietal <%=wine.varietal %> from <%= wine.winery%></li>
-<%end%>
-</ol>
-<%= paginate @wines %>
+
+	<h1> <%= pluralize(@wines.size, 'wine') %> </h1>
+	<%= page_entries_info @wines %>
+	
+	<ol>
+		<% @wines.each do |wine| %>
+		<li><%=link_to(wine.name, wine)%> by <%= wine.name%>
+	<%= format_average_rating(wine) %>
+	<% if wine.log_entries.any? %>
+	(out of <%= pluralize(wine.log_entries.size. 'log_entry') %>)
+	<% end %>
+</li>
+		<% end %>
+	</ol>
+	<%= paginate @wines %>
+
+	<!--<%= link_to 'New Wine', new_wine_path %> -->
 
