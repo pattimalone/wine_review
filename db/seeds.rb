@@ -1,5 +1,5 @@
-Wine.create(name:'Lindon',year:2014,winery:'BearGrass Winery',country:'USA',varietal:'Chardonay')
+Wine.create(name:'Xavier',year:2010,winery:'Roman Vinyard, country:'ROME',varietal:'Chardonay', price:20.99)
 
-Wine.create(name:'cava',year:2013,winery: 'Spanish Winery', country:'Brazil', varietal:'Sparking')
+Wine.create(name:'Cava',year:2013,winery: 'Spanish Vinyard', country:'Spain', varietal:'Sparkling', price:10.99)
 
-Wine.create(name:'Laughing Bear',year:2011, winery: 'Napa Valley' country:'USA', varietal:'Merlot')
+Wine.create(name:'Dancing Bear',year:2011, winery: 'Jacob Creek' country:'USA', varietal:'Merlot', price:15.99)
