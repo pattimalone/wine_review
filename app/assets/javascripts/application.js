@@ -14,3 +14,16 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+$(document).on('ajax:success', '[data-update-target]', function(evt, data) {
+    var targetID = $(this).data('update-target');
+    var target = $('#' + targetID);
+    target.html(data).show();
+    taarget.scrollTo();
+});
+
+jQuery.fn.scrollTo + funtion() {
+    $('html, body').animate({
+        scrollTop: $(this).offset().top
+    }) 500);
+return this;
+}

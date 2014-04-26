@@ -1,5 +1,5 @@
-Wine.create(name:'The Red Stuff',year:2014,winery:'Booze Winery',country:'USA',varietal:'Syrah')
+Wine.create(name:'Lindon',year:2014,winery:'BearGrass Winery',country:'USA',varietal:'Chardonay')
 
-Wine.create(name:'The Rose Stuff',year:2013,winery: 'Allen Winery', country:'Brazil', varietal:'Rose')
+Wine.create(name:'cava',year:2013,winery: 'Spanish Winery', country:'Brazil', varietal:'Sparking')
 
-Wine.create(name:'The White Stuff',year:2011, winery: 'Hamilton Winery', country:'Spain', varietal:'Riesling')
+Wine.create(name:'Laughing Bear',year:2011, winery: 'Napa Valley' country:'USA', varietal:'Merlot')
