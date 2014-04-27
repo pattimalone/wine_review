@@ -6,3 +6,13 @@ class Wine < ActiveRecord::Base
 	validates :varietal, :inclusion => { :in => VARIETALS}
 	validates :year, numericality: { only_integer: true } 
 end
+
+def average_rating
+	if log_entries.loaded?
+		log_entries.map(&:rating).compact.average
+	else
+		log_entries.average(:rating)
+	end
+end
+end
+
