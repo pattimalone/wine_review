@@ -1,9 +1,8 @@
 class Wine < ActiveRecord::Base
-	validates :name, :year, :winery, :country, :varietal, :price, presence: true
-	validates :year,
-		numericality: { only_integer: true, greater_than_or_equal_to: 0 }, 
-		unless: "year.blank?"
-	validates :price,
-		numericality: { greater_than_or_equal_to: 0},
-		if: "price.present?"
+	VARIETALS = ["Cabernet", "Chardonnay", "Chianti", "Merlot", "Sparkling", "Rose", "Zinfandel" ]
+	
+	validates :name, :year, :winery, :country, :varietal, presence: true
+	
+	validates :varietal, :inclusion => { :in => VARIETALS}
+	validates :year, numericality: { only_integer: true } 
 end
