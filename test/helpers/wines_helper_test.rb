@@ -1,4 +1,4 @@
 require 'test_helper'
 
-class WinesHelperTest < ActionView::TestCase
+class LogEntriesHelperTest < ActionView::TestCase
 end

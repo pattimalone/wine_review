@@ -1,11 +1,20 @@
 WineReview::Application.routes.draw do
-  get "wines/:id"=>"wines#show",as: 'wine'
-  get "/wines"=>"wines#index",as: 'wines'
+  #get "wines/:id"=>"wines#show",as: 'wine'
+  #get "/wines"=>"wines#index",as: 'wines'
+  
+
+ resources :wines do
+  resources :log_entries
+  get 'page/:page', :action => :index, :on => :collection 
+ end
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
+  root 'wines#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

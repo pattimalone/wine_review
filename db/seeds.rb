@@ -1,4 +1,4 @@
-Wine.create(name:'Xavier', year:2010, winery:'Roman Vinyard, country:'ROME', varietal:'Chardonay')
+Wine.create(name:'Xavier', year:2010, winery:'Roman Vinyard, country:'Italy', varietal:'Chardonay')
 
 Wine.create(name:'Cava', year:2013, winery:'Spanish Vinyard', country:'Spain', varietal:'Sparkling')
 
