@@ -5,7 +5,7 @@ class Wine < ActiveRecord::Base
 	
 	validates :varietal, :inclusion => { :in => VARIETALS}
 	validates :year, numericality: { only_integer: true } 
-end
+
 
 	has_many :log_entries, dependent: :destroy
 

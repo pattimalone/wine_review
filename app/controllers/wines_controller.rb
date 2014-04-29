@@ -1,6 +1,6 @@
 class WinesController < ApplicationController
 
-		before_filter :check_for_cancel, :only => [:creaate, :edit]
+		before_filter :check_for_cancel, :only => [:create, :edit]
 
 
  		before_action :set_wine_param, only: [ :show, :edit, :update, :destroy ]
@@ -8,7 +8,7 @@ class WinesController < ApplicationController
   	def index
   		@available_at = Time.now
 		@wines = Wine.order(:name).page(params[:page])
-		#flash[:notice] = "Today's special is buy 1 -drink 1"
+		#flash[:notice] = "Today's special is buy 1 - drink 1"
 	end
 
 	def show
@@ -44,6 +44,7 @@ class WinesController < ApplicationController
 			@wine.destroy
 			redirect_to wines_url
 	end
+	
 	def check_for_cancel
 		fp = File.open("hh_debug.out", "w")
 		fp.puts "in check_for_cancel"
@@ -66,7 +67,8 @@ private
 	def wine_params
 			params.require(:wine).permit( :name, :year, :winery, :country, :varietal)
 	end
-	def set_wine_params
+	
+	def set_wine_param
 			@wine = Wine.find(params[:id])
 	end
 
