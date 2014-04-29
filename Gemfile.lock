@@ -51,8 +51,8 @@ GEM
     kaminari (0.15.1)
       actionpack (>= 3.0.0)
       activesupport (>= 0.13.0)
-      kaminari-bootstrap (3.0.1)
       kaminari (>= 0.13.0)
+      kaminari-bootstrap (= 3.0.1)
       rails
     mail (2.5.4)
       mime-types (~> 1.16)
