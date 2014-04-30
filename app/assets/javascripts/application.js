@@ -21,7 +21,7 @@ $(document).on('ajax:success', '[data-update-target]', function(evt, data) {
     target.scrollTo();
 });
 
-jQuery.fn.scrollTo + funtion() {
+jQuery.fn.scrollTo = function() {
     $('html, body').animate({
         scrollTop: $(this).offset().top
     }, 500);

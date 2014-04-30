@@ -40,6 +40,7 @@ class WinesController < ApplicationController
 		end
 	end
 	
+
 	def destroy
 			@wine.destroy
 			redirect_to wines_url
@@ -55,9 +56,6 @@ class WinesController < ApplicationController
 			redirect_to wines_path
 		end
 	end
-
-		
-
 
 	def post
 	end

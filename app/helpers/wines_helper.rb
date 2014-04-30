@@ -1,12 +1,12 @@
 module WinesHelper
 	def formatted_time(time)
-			time.strftime("%B %d, %Y at %1: %M %p")
+			time.strftime("%B %d, %Y at %H: %M ")
 		end
 
-	def format_average_ratings(wine)
+	def format_average_rating(wine)
 		average = wine.average_rating
 		if average
-				pluralize[number_with_precision(average, precision: 1), 'rating']
+				pluralize(number_with_precision(average, precision: 1), 'rating')
 		else
 			'No reviews'
 			

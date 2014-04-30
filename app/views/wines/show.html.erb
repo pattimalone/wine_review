@@ -6,9 +6,8 @@
 	</header>
 	<p><label>Year: </label> <%= @wine.year %></p>
 	<p><label>Winery: </label> <%= @wine.winery %></p>
-	<p><label>Country: </label> <%= @wine.country %></p>
+	<p><label>Country of origin: </label> <%= @wine.country %></p>
 	<p><label>Varietal: </label> <%= @wine.varietal %></p>
-	<p><label>Average Review: </label> <%= format_average_rating(@wine) %></p>
 </article>
 
 
@@ -18,9 +17,9 @@
 <%= button_to 'Delete', @wine, method: :delete,
 			data: { confirm: 'Are you sure?'} %>
 <p>
-	Create a new Lot Entry or read all
+	Create a new Log Entry or read all
 	<%= link_to pluralize(@wine.log_entries.size, 'Log Entries'),
 	wine_log_entries_path(@wine) %>
 </p>
 
-<p><label>Average Rating:</lavel> <%= format_average_ratings(@wine) %></p>
+<p><label>Average Rating:</label> <%= format_average_rating(@wine) %></p>

@@ -13,7 +13,7 @@ before_action :set_wine
 	def create 
 		@log_entry = @wine.log_entries.new (log_entry_params)
 		if @log_entry.save
-			redirect_to_wine_log_entries_path(@wine),  notice: 'Log Entry saved!'
+			redirect_to wine_log_entries_path(@wine),  notice: 'Log Entry saved!'
 	else
 		render :new
 	end

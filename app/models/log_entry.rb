@@ -3,6 +3,6 @@ class LogEntry < ActiveRecord::Base
 
 	STARS = 1..5
 	validates :name, :rating, :location, :comments, :tasted_on, presence: true
-	validates :rating, :inclusion: { :in STARS, message: "must be from #{STARS.first} to #{STARS.last}"}
+	validates :rating, inclusion: { in: STARS, message: "must be from #{STARS.first} to #{STARS.last}"}
 end
 
